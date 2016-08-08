@@ -29,12 +29,12 @@
             preload: function() {
                 var preloadSprite = this.game.add.sprite(this.game.world.width / 2 ,this.game.world.height / 2 ,'loading'); //创建显示loading进度的sprite
                 this.game.load.setPreloadSprite(preloadSprite);
-                this.game.load.audio('drivin-home', 'assets/world.wav');
-                this.game.load.audio('ho-ho-ho', 'assets/bonbon.wav');
-                this.game.load.audio('hop', 'assets/bomb.wav');
+                // this.game.load.audio('drivin-home', 'assets/world.wav');
+                // this.game.load.audio('ho-ho-ho', 'assets/bonbon.wav');
+                // this.game.load.audio('hop', 'assets/bomb.wav');
                 this.game.load.image('platform', 'assets/1.png');
                 this.game.load.spritesheet('santa-running', 'assets/runman.png', 493/5, 174,5);
-                this.game.load.image('snow-bg', 'assets/beijing1.png');
+                this.game.load.image('snow-bg', 'assets/beijing1.jpg');
                 this.game.load.image('snow-bg-2', 'assets/yuanjing1.png');
                 this.game.load.image('snowflake', 'assets/xiaoshixiaoguo.png');
                 this.game.load.image('logo', 'assets/name.png');
@@ -75,9 +75,9 @@
                 this.gameSpeed = 580;
                 this.isGameOver = false;
                 this.game.physics.startSystem(Phaser.Physics.ARCADE);
-                this.music = this.game.add.audio('drivin-home');
-                this.music.loop = true;
-                this.music.play();
+                // this.music = this.game.add.audio('drivin-home');
+                // this.music.loop = true;
+                // this.music.play();
                 this.bg_heaven = this.game.add.tileSprite(0, 0, width, height, 'snow-bg-2').autoScroll(-50,0);
                 this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
                 this.bg.fixedToCamera = true;
@@ -138,8 +138,8 @@
                         this.endGame();
                     }
                     if (this.cursors.up.isDown && this.santa.body.touching.down || this.spacebar.isDown && this.santa.body.touching.down || this.game.input.mousePointer.isDown && this.santa.body.touching.down || this.game.input.pointer1.isDown && this.santa.body.touching.down) {
-                        this.jumpSound = this.game.add.audio('hop');
-                        this.jumpSound.play();
+                        // this.jumpSound = this.game.add.audio('hop');
+                        // this.jumpSound.play();
                         this.santa.body.velocity.y = -500;
                     }
                     if (this.particleInterval === this.currentFrame) {
@@ -159,9 +159,9 @@
                 }
             },
             endGame: function() {
-                this.music.stop();
-                this.music = this.game.add.audio('ho-ho-ho');
-                this.music.play();
+                // this.music.stop();
+                // this.music = this.game.add.audio('ho-ho-ho');
+                // this.music.play();
                 this.game.state.start('gameOver');
             }
         },
