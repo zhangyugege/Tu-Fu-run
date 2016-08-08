@@ -34,8 +34,8 @@
                 // this.game.load.audio('hop', 'assets/bomb.wav');
                 this.game.load.image('platform', 'assets/1.png');
                 this.game.load.spritesheet('santa-running', 'assets/runman.png', 493/5, 174,5);
-                this.game.load.image('snow-bg', 'assets/beijing1.jpg');
-                this.game.load.image('snow-bg-2', 'assets/yuanjing1.png');
+                this.game.load.image('snow-bg', 'assets/beijing1.png');
+                this.game.load.image('snow-bg-2', 'assets/yuanjing1.jpg');
                 this.game.load.image('snowflake', 'assets/xiaoshixiaoguo.png');
                 this.game.load.image('logo', 'assets/name.png');
                 this.game.load.image('startbtn', 'assets/bangzhujiantou.png');
